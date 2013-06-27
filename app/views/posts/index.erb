@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Blog: History of all the shovel</h1>
+  <p>All Posts:</p>
+  
+  <div class="menu">
+    <% @all_posts.each do |post| %>
+      <a href="/posts/<%= post.id %>"><%= post.title %></a><br>
+    <% end %>
+  </div>
+</div>

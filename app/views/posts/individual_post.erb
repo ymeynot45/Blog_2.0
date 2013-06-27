@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @indiv_post.title %></h1><br>
+    <%= @indiv_post.content %>
+</div>
+<div class="container"><br>
+  <% @tags.each do |tag| %>
+    <%= tag %>, 
+  <% end %>
+</div>
