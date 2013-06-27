@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Tags of the shovel</h1>
+  <p>All Tags:</p>
+  
+  <div class="menu">
+    <% @all_tags.each do |tags| %>
+      <a href="/tags/<%= tags.id %>"><%= tags.name %></a><br>
+    <% end %>
+  </div>
+</div>

@@ -17,6 +17,6 @@ end
 
 get '/posts/:id' do
   @indiv_post = Post.find(params[:id])
-  @tags = @indiv_post.tags.pluck(:name)
+  @tags = @indiv_post.tags
   erb :"posts/individual_post"
 end
