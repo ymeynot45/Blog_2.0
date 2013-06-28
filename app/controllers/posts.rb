@@ -4,7 +4,9 @@ end
 
 post '/create' do
   @post = Post.create(params[:blog])
+  tag_id = Tag.find_or_create_by_name(params[:tag]).id
   post_id = @post.id
+  @new_tag = Unicorn.create(post_id: post_id, tag_id: tag_id)
   redirect "/posts/#{post_id}"
 end
 

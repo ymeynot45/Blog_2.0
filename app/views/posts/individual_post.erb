@@ -4,6 +4,6 @@
 </div>
 <div class="container"><br>
   <% @tags.each do |tag| %>
-    <%= tag.name %>, 
+    <a href="/tags/<%= tag.id %>"><%= tag.name %></a>, 
   <% end %>
 </div>
