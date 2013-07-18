@@ -1,6 +1,21 @@
+User.Create(author: "karst",
+            password: "karst",
+            post_count: 0)
+
+User.Create(author: "mike",
+            password: "bikes",
+            post_count: 0)
+
+User.Create(author: "calvin",
+            password: "hobbes",
+            post_count: 0)
+
+
+
 10.times do
   Post.create(title: Faker::Company.bs,
-              content: Faker::Lorem.paragraphs(paragraph_count = 5))
+              content: Faker::Lorem.paragraphs(paragraph_count = 5)
+              user_id: rand(1..3))
 end
 
 Tag.create(name: 'Food')

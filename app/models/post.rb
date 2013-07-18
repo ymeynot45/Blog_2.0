@@ -4,4 +4,5 @@ class Post < ActiveRecord::Base
 
   has_many :unicorns
   has_many :tags, :through => :unicorns
+  belongs_to :user
 end
